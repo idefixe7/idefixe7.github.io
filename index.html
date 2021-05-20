@@ -117,11 +117,7 @@
 <script>
   // Sends event to client
   vkBridge.send('VKWebAppInit');
-  vkBridge.send('VKWebAppGetAds')
-    .then((promoBannerProps) => {
-        this.setState({ promoBannerProps });
-    })
-{ this.state.promoBannerProps && <PromoBanner bannerData={ this.state.promoBannerProps } /> }	
+
 </script>
                               
                      
@@ -137,21 +133,21 @@
     admanInit({
       user_id: user_id,
       app_id: 7836406,
-      mobile: true,
-      type: 'rewarded' 			// 'preloader' or 'rewarded' (default - 'preloader')
+      type: 'preloader'         // 'preloader' or 'rewarded' (default - 'preloader')
       // params: {preview: 1}   // to verify the correct operation of advertising
     }, onAdsReady, onNoAds);
  
     function onAdsReady(adman) {
       adman.onStarted(function () {});
-      adman.onCompleted(function() {});
-      adman.onSkipped(function() {});      
-      adman.onClicked(function() {}); 
+      adman.onCompleted(function() {});          
+      adman.onSkipped(function() {});          
+      adman.onClicked(function() {});
       adman.start('preroll');
     };
     function onNoAds() {};
   });
 </script>
+    
                        
 
 
