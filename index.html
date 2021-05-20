@@ -121,44 +121,6 @@
 .then(data => console.log(data.result))
 .catch(error => console.log(error));
 </script>
-                              
-                     
-                    
-<script type="text/javascript" src="//vk.com/js/api/xd_connection.js?2" charset="utf-8"></script>
-<script type="text/javascript" src="//ad.mail.ru/static/admanhtml/rbadman-html5.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="//vk.com/js/api/adman_init.js" charset="utf-8"></script>
-<script>
-  window.addEventListener('load', function() {
- 
-    var user_id = null;   // user's id
-    var app_id = 7836406;  // your app's id
- 
-    admanInit({
-      user_id: user_id,
-      app_id: 7836406,
-      mobile: true,
-      type: 'preloader' 			// 'preloader' or 'rewarded' (default - 'preloader')
-      // params: {preview: 1}   // to verify the correct operation of advertising
-    }, onAdsReady, onNoAds);
- 
-    function onAdsReady(adman) {
-      adman.onStarted(function () {});
-      adman.onCompleted(function() {});
-      adman.onSkipped(function() {});      
-      adman.onClicked(function() {}); 
-      adman.start('preroll');
-    };
-    function onNoAds() {};
-  });
-</script>
-    
-    
-                       
-
-
-    
-    
-    	
 </head>
 <body>
 	<canvas id='canvas'>
@@ -183,7 +145,7 @@
 	<script type='text/javascript' src='index.js'></script>
 	<script type='text/javascript'>//<![CDATA[
 
-		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":5788288,"index.wasm":12660416},"gdnativeLibs":[]};
+		const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":5788640,"index.wasm":12660416},"gdnativeLibs":[]};
 		var engine = new Engine(GODOT_CONFIG);
 
 		(function() {
