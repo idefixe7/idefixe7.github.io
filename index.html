@@ -117,7 +117,9 @@
 <script>
   // Sends event to client
   vkBridge.send('VKWebAppInit');
-
+  bridge.send("VKWebAppShowNativeAds", {ad_format:"preloader"})
+.then(data => console.log(data.result))
+.catch(error => console.log(error));
 </script>
                               
                      
